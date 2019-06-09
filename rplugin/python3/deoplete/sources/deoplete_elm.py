@@ -81,7 +81,7 @@ class Source(Base):
     def get_project_root(self, file_path):
         current_path = path.dirname(file_path)
         while current_path != '/' and not path.exists(
-            path.join(current_path, 'elm-package.json')
+            path.join(current_path, 'elm.json')
         ):
             current_path = path.dirname(current_path)
 
